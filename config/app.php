@@ -123,4 +123,7 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    // Define the areas
+    'areas' => ['Westlands', 'Starehe', 'Mathare', 'Makadara', 'Langata', 'Kibra', 'Kasarani', 'Njiru', 'Kamukunji', 'Dagoretti', 'Embakasi']
+
 ];
