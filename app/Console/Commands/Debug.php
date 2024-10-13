@@ -45,7 +45,8 @@ class Debug extends Command
                 }
 
                 // DOB: trim and convert into Carbon object
-                if (isset($record->dob)) {
+                if (isset($record->dob) && strtotime(trim($record->dob)) !== false) {
+                    // Trim and convert the DOB to a Carbon object and format it as a date string
                     $dataToUpdate['dob'] = Carbon::parse(trim($record->dob))->toDateString();
                 }
 
@@ -86,7 +87,7 @@ class Debug extends Command
                     // Delete the record from the current table based on the id
                     DB::table($area)->where('id', $record->id)->delete();
                 }
-            } */ 
+            }  */
 
             foreach ($records as $record) {
                 // Check if the record has a phone_number and if it exists in the DublicatePhoneNumber model
