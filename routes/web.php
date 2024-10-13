@@ -28,5 +28,5 @@ Route::get('/get/cohort2/workers', function (Request $request) {
     }
 
     // Call the Cohort2WorkersExport and pass the selected areas to it
-    return Excel::download(new Cohort2WorkersExport($selectedAreas), 'cohort_2_workers_' . now()->format('Y-m-d_His') . '.xlsx');
+    return Excel::download(new Cohort2WorkersExport($selectedAreas), 'cohort_1_after_clean_up_with_Pv_Climate_works_12th_Oct_2024' . now()->format('Y-m-d_His') . '.xlsx');
 })->name('get.cohort2.workers');
